@@ -90,3 +90,7 @@ C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\Paged Adventures.exe.manife
 C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\Paged Adventures.application
 C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\Paged Adventures.exe
 C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\Paged Adventures.pdb
+C:\Users\RD\Desktop\PagedAdventuresProject\bin\Debug\HelpFiles\Help - Customer View Form.pdf
+C:\Users\RD\Desktop\PagedAdventuresProject\bin\Debug\HelpFiles\Help - Forgot Password.pdf
+C:\Users\RD\Desktop\PagedAdventuresProject\bin\Debug\HelpFiles\Help - Logon Form.pdf
+C:\Users\RD\Desktop\PagedAdventuresProject\bin\Debug\HelpFiles\Help - New User.pdf

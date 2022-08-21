@@ -213,10 +213,18 @@
     <None Include="Course Design Guides\Design Guide - Classroom Program Requirements and Naming Standards%28Final Project%29%282021-03-26%29.pdf" />
     <None Include="Course Design Guides\Notes" />
     <None Include="Course Design Guides\Prefixes%282021-03-26%29.pdf" />
-    <None Include="HelpFiles\Help - Customer View Form.pdf" />
-    <None Include="HelpFiles\Help - Forgot Password.pdf" />
-    <None Include="HelpFiles\Help - Logon Form.pdf" />
-    <None Include="HelpFiles\Help - New User.pdf" />
+    <None Include="HelpFiles\Help - Customer View Form.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="HelpFiles\Help - Forgot Password.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="HelpFiles\Help - Logon Form.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="HelpFiles\Help - New User.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
