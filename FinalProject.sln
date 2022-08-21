@@ -5,8 +5,6 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalProject", "FinalProject.csproj", "{F70EBD24-52AE-435B-B376-4356C2B95D57}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Paged Adventures Setup", "Paged Adventures Setup\Paged Adventures Setup.vdproj", "{2E34840F-5385-4DD2-8F8F-C4647024F0CC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,8 +15,6 @@ Global
 		{F70EBD24-52AE-435B-B376-4356C2B95D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F70EBD24-52AE-435B-B376-4356C2B95D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F70EBD24-52AE-435B-B376-4356C2B95D57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2E34840F-5385-4DD2-8F8F-C4647024F0CC}.Debug|Any CPU.ActiveCfg = Debug
-		{2E34840F-5385-4DD2-8F8F-C4647024F0CC}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

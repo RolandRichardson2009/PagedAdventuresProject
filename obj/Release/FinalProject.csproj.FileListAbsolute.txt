@@ -69,9 +69,6 @@ C:\Users\RD\Desktop\PagedAdventuresProject\bin\Release\Paged Adventures.exe
 C:\Users\RD\Desktop\PagedAdventuresProject\bin\Release\Paged Adventures.pdb
 C:\Users\RD\Desktop\PagedAdventuresProject\obj\Release\FinalProject.csproj.AssemblyReference.cache
 C:\Users\RD\Desktop\PagedAdventuresProject\obj\Release\FinalProject.csproj.SuggestedBindingRedirects.cache
-C:\Users\RD\Desktop\PagedAdventuresProject\obj\Release\Interop.AcroPDFLib.dll
-C:\Users\RD\Desktop\PagedAdventuresProject\obj\Release\AxInterop.AcroPDFLib.dll
-C:\Users\RD\Desktop\PagedAdventuresProject\obj\Release\FinalProject.csproj.ResolveComReference.cache
 C:\Users\RD\Desktop\PagedAdventuresProject\obj\Release\FinalProject.frmCustomers.resources
 C:\Users\RD\Desktop\PagedAdventuresProject\obj\Release\FinalProject.frmCustomerView.resources
 C:\Users\RD\Desktop\PagedAdventuresProject\obj\Release\FinalProject.frmDiscounts.resources
