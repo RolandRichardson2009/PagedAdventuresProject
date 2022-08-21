@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>KPKrnpWgFcmKrVbJOWMZFa5z+VP+nKVplyJqcG5NxW4=</dsig:DigestValue>
+        <dsig:DigestValue>aBbWhWvJug/mfg5bp70UKqumUzFsDQ1Kap5qzzG9WqY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -62,19 +62,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8DdNz/SXAaPgcaRvB2GmUMTEAlpWKR9gnJQqt68/aLw=</dsig:DigestValue>
+        <dsig:DigestValue>AU9GXL/nZ7G7ckxhsjq7Q+brWFQMnezF76wbd7y3z/U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Paged Adventures.exe" size="443856">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Paged Adventures.exe" size="442880">
       <assemblyIdentity name="Paged Adventures" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vj8eqsyGKht41cTa/fOjsSUbbvghBY1g6QQ0/CshJag=</dsig:DigestValue>
+        <dsig:DigestValue>i50Z0zK1Aambn0qeLBa/bHMIdv4ujkppeADRbkhCT6I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
