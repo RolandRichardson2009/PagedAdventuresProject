@@ -1105,8 +1105,8 @@ namespace FinalProject
                     CloseDisposeDatabasePagedAdventures();
                     return dgvDiscounts;
                 }
-                CloseDisposeDatabasePagedAdventures();
-                return dgvDiscounts;
+                //CloseDisposeDatabasePagedAdventures();
+                //return dgvDiscounts;
             }
         }
 
