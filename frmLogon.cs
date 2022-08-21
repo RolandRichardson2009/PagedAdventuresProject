@@ -23,11 +23,6 @@ namespace FinalProject
         //User logs in, username and password is checked.
         private void btnLogOn_Click(object sender, EventArgs e)
         {
-            //frmCustomerView frmCustomerViewVar = new frmCustomerView();
-            //this.Hide();
-            //frmCustomerViewVar.ShowDialog();
-
-
             try
             {
                 if (clsValidation.ValidateUsername(tbxUsername.Text.ToLower(), 3) &&
@@ -36,23 +31,12 @@ namespace FinalProject
                     if (clsSQL.LoginToApplication(tbxUsername.Text.ToLower(), tbxPassword.Text))
                     {
                         //Run if the username and password match in the database
-                        MessageBox.Show("Username and Password Match!",
-                            "Success", MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
-                        MessageBox.Show("Position: " +
-                            clsSQL.fetchPosition(tbxUsername.Text.ToLower()),
-                            "Success", MessageBoxButtons.OK,
-                            MessageBoxIcon.Information);
-
                         UserName = tbxUsername.Text.ToLower();
-
                         tbxUsername.Text = "";
                         tbxPassword.Text = "";
-
                         frmCustomerView frmCustomerViewVar = new frmCustomerView();
                         this.Hide();
                         frmCustomerViewVar.ShowDialog();
-
                     }
                     else
                     {

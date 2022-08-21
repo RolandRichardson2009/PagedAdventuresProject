@@ -55,7 +55,6 @@ namespace FinalProject
             this.tbxUsername.Location = new System.Drawing.Point(126, 12);
             this.tbxUsername.MaxLength = 20;
             this.tbxUsername.Name = "tbxUsername";
-            this.tbxUsername.ShortcutsEnabled = false;
             this.tbxUsername.Size = new System.Drawing.Size(341, 29);
             this.tbxUsername.TabIndex = 1;
             this.tbxUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxUsername_KeyPress);
@@ -66,7 +65,6 @@ namespace FinalProject
             this.tbxPassword.MaxLength = 20;
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.PasswordChar = '*';
-            this.tbxPassword.ShortcutsEnabled = false;
             this.tbxPassword.Size = new System.Drawing.Size(341, 29);
             this.tbxPassword.TabIndex = 2;
             this.tbxPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxPassword_KeyPress);
@@ -84,7 +82,7 @@ namespace FinalProject
             // 
             this.btnLogOn.Location = new System.Drawing.Point(16, 82);
             this.btnLogOn.Name = "btnLogOn";
-            this.btnLogOn.Size = new System.Drawing.Size(105, 51);
+            this.btnLogOn.Size = new System.Drawing.Size(148, 51);
             this.btnLogOn.TabIndex = 3;
             this.btnLogOn.Text = "&Log On";
             this.btnLogOn.UseVisualStyleBackColor = true;
@@ -92,9 +90,9 @@ namespace FinalProject
             // 
             // btnNewUser
             // 
-            this.btnNewUser.Location = new System.Drawing.Point(127, 82);
+            this.btnNewUser.Location = new System.Drawing.Point(170, 82);
             this.btnNewUser.Name = "btnNewUser";
-            this.btnNewUser.Size = new System.Drawing.Size(105, 51);
+            this.btnNewUser.Size = new System.Drawing.Size(130, 51);
             this.btnNewUser.TabIndex = 4;
             this.btnNewUser.Text = "&New User";
             this.btnNewUser.UseVisualStyleBackColor = true;
@@ -102,7 +100,7 @@ namespace FinalProject
             // 
             // btnForgotPassword
             // 
-            this.btnForgotPassword.Location = new System.Drawing.Point(238, 82);
+            this.btnForgotPassword.Location = new System.Drawing.Point(306, 82);
             this.btnForgotPassword.Name = "btnForgotPassword";
             this.btnForgotPassword.Size = new System.Drawing.Size(161, 51);
             this.btnForgotPassword.TabIndex = 5;
@@ -112,9 +110,9 @@ namespace FinalProject
             // 
             // btnHelp
             // 
-            this.btnHelp.Location = new System.Drawing.Point(405, 82);
+            this.btnHelp.Location = new System.Drawing.Point(473, 82);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(62, 51);
+            this.btnHelp.Size = new System.Drawing.Size(165, 51);
             this.btnHelp.TabIndex = 6;
             this.btnHelp.Text = "&Help";
             this.btnHelp.UseVisualStyleBackColor = true;
@@ -122,9 +120,9 @@ namespace FinalProject
             // 
             // btnTogglePasswordVisibility
             // 
-            this.btnTogglePasswordVisibility.Location = new System.Drawing.Point(473, 34);
+            this.btnTogglePasswordVisibility.Location = new System.Drawing.Point(473, 12);
             this.btnTogglePasswordVisibility.Name = "btnTogglePasswordVisibility";
-            this.btnTogglePasswordVisibility.Size = new System.Drawing.Size(114, 96);
+            this.btnTogglePasswordVisibility.Size = new System.Drawing.Size(165, 64);
             this.btnTogglePasswordVisibility.TabIndex = 7;
             this.btnTogglePasswordVisibility.Text = "&Toggle Password Visibility";
             this.btnTogglePasswordVisibility.UseVisualStyleBackColor = true;
@@ -135,7 +133,7 @@ namespace FinalProject
             this.AcceptButton = this.btnLogOn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 143);
+            this.ClientSize = new System.Drawing.Size(645, 143);
             this.Controls.Add(this.btnTogglePasswordVisibility);
             this.Controls.Add(this.btnHelp);
             this.Controls.Add(this.btnForgotPassword);
