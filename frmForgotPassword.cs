@@ -41,27 +41,31 @@ namespace FinalProject
         }
         private void btnShowSecurityQuestions_Click(object sender, EventArgs e)
         {
-            try { 
+            try {
                 //Check if username exists in database
-            if (!(clsSQL.DatabaseCommandPagedAdventuresCheckExistingUsername(tbxUsername.Text.ToLower())))
-            {
-                //fill in security questions
-                lblSecurityQuestion1.Text =  clsSQL.GetSecurityQuestions("FirstChallengeQuestion", tbxUsername.Text.ToLower());
-                lblSecurityQuestion2.Text = clsSQL.GetSecurityQuestions("SecondChallengeQuestion", tbxUsername.Text.ToLower());
-                lblSecurityQuestion3.Text = clsSQL.GetSecurityQuestions("ThirdChallengeQuestion", tbxUsername.Text.ToLower());
-                //Disable controls
-                tbxUsername.Enabled = false;
-                btnShowSecurityQuestions.Enabled = false;
-                //Enable Controls
-                btnCheckAnswers.Enabled = true;
-                tbxAnswer1.Enabled = true;
-                tbxAnswer2.Enabled = true;
-                tbxAnswer3.Enabled = true;
-                //Change Accept button to new appropriate value
-                this.AcceptButton = btnCheckAnswers;
-                //Focus on next important field
-                tbxAnswer1.Focus();
-            }
+                if (!(clsSQL.DatabaseCommandPagedAdventuresCheckExistingUsername(tbxUsername.Text.ToLower())))
+                {
+                    //fill in security questions
+                    lblSecurityQuestion1.Text = clsSQL.GetSecurityQuestions("FirstChallengeQuestion", tbxUsername.Text.ToLower());
+                    lblSecurityQuestion2.Text = clsSQL.GetSecurityQuestions("SecondChallengeQuestion", tbxUsername.Text.ToLower());
+                    lblSecurityQuestion3.Text = clsSQL.GetSecurityQuestions("ThirdChallengeQuestion", tbxUsername.Text.ToLower());
+                    //Disable controls
+                    tbxUsername.Enabled = false;
+                    btnShowSecurityQuestions.Enabled = false;
+                    //Enable Controls
+                    btnCheckAnswers.Enabled = true;
+                    tbxAnswer1.Enabled = true;
+                    tbxAnswer2.Enabled = true;
+                    tbxAnswer3.Enabled = true;
+                    //Change Accept button to new appropriate value
+                    this.AcceptButton = btnCheckAnswers;
+                    //Focus on next important field
+                    tbxAnswer1.Focus();
+                }
+                else 
+                {
+                    MessageBox.Show("Username not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (Exception)
             {
