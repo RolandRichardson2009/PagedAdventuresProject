@@ -57,3 +57,7 @@ C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\Paged Adventures.exe.m
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\Paged Adventures.application
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\Paged Adventures.exe
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\Paged Adventures.pdb
+C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\HelpFiles\Help - Customer View Form.pdf
+C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\HelpFiles\Help - Forgot Password.pdf
+C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\HelpFiles\Help - Logon Form.pdf
+C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\HelpFiles\Help - New User.pdf
