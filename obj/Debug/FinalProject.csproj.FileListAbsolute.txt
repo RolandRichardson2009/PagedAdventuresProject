@@ -35,8 +35,6 @@ C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\Paged Adventures.exe.m
 C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\Paged Adventures.application
 C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\Paged Adventures.exe
 C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\Paged Adventures.pdb
-C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\Interop.AcroPDFLib.dll
-C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\AxInterop.AcroPDFLib.dll
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\FinalProject.csproj.AssemblyReference.cache
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\FinalProject.csproj.SuggestedBindingRedirects.cache
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\Interop.AcroPDFLib.dll
