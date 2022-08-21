@@ -37,6 +37,9 @@ C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\Paged Adventures.exe
 C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\Paged Adventures.pdb
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\FinalProject.csproj.AssemblyReference.cache
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\FinalProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\FinalProject.csproj.ResolveComReference.cache
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\FinalProject.frmCustomers.resources
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\FinalProject.frmCustomerView.resources
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\FinalProject.frmDiscounts.resources
@@ -57,7 +60,37 @@ C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\Paged Adventures.exe.m
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\Paged Adventures.application
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\Paged Adventures.exe
 C:\Users\RD\Source\Repos\PagedAdventuresProject\obj\Debug\Paged Adventures.pdb
-C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\HelpFiles\Help - Customer View Form.pdf
-C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\HelpFiles\Help - Forgot Password.pdf
-C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\HelpFiles\Help - Logon Form.pdf
-C:\Users\RD\Source\Repos\PagedAdventuresProject\bin\Debug\HelpFiles\Help - New User.pdf
+C:\Users\RD\Desktop\PagedAdventuresProject\bin\Debug\Paged Adventures.exe.config
+C:\Users\RD\Desktop\PagedAdventuresProject\bin\Debug\Paged Adventures.exe.manifest
+C:\Users\RD\Desktop\PagedAdventuresProject\bin\Debug\Paged Adventures.application
+C:\Users\RD\Desktop\PagedAdventuresProject\bin\Debug\Paged Adventures.exe
+C:\Users\RD\Desktop\PagedAdventuresProject\bin\Debug\Paged Adventures.pdb
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.csproj.AssemblyReference.cache
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.csproj.ResolveComReference.cache
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.frmCustomers.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.frmCustomerView.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.frmDiscounts.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.frmForgotPassword.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.frmInventory.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.frmLogon.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.frmNewCustomer.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.frmNewDiscount.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.frmNewItem.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.frmNewManager.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.frmNewUser.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.frmPersonnel.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.frmReports.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\Paged_Adventures.Properties.Resources.resources
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.csproj.GenerateResource.cache
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\Paged Adventures.exe.manifest
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\Paged Adventures.application
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\Paged Adventures.exe
+C:\Users\RD\Desktop\PagedAdventuresProject\obj\Debug\Paged Adventures.pdb
+C:\Users\RD\Desktop\PagedAdventuresProject\bin\Debug\HelpFiles\Help - Customer View Form.pdf
+C:\Users\RD\Desktop\PagedAdventuresProject\bin\Debug\HelpFiles\Help - Forgot Password.pdf
+C:\Users\RD\Desktop\PagedAdventuresProject\bin\Debug\HelpFiles\Help - Logon Form.pdf
+C:\Users\RD\Desktop\PagedAdventuresProject\bin\Debug\HelpFiles\Help - New User.pdf

@@ -26,7 +26,7 @@ namespace FinalProject
                     {
 
                         #if DEBUG
-                        System.Diagnostics.Process.Start(@"C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\HelpFiles\Help - Logon Form.pdf");
+                        System.Diagnostics.Process.Start(@"C:\Users\RD\Desktop\PagedAdventuresProject\HelpFiles\Help - Logon Form.pdf");
 #else
                         System.Diagnostics.Process.Start(Application.StartupPath.ToString() + @"\HelpFiles\Help - Logon Form.pdf");
 #endif
@@ -42,7 +42,7 @@ namespace FinalProject
                     {
 
                         #if DEBUG
-                        System.Diagnostics.Process.Start(@"C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\HelpFiles\Help - New User.pdf");
+                        System.Diagnostics.Process.Start(@"C:\Users\RD\Desktop\PagedAdventuresProject\HelpFiles\Help - New User.pdf");
 #else
                         System.Diagnostics.Process.Start(Application.StartupPath.ToString() + @"\HelpFiles\Help - New User.pdf");
 #endif
@@ -58,7 +58,7 @@ namespace FinalProject
                     {
 
                         #if DEBUG
-                        System.Diagnostics.Process.Start(@"C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\HelpFiles\Help - Forgot Password.pdf");
+                        System.Diagnostics.Process.Start(@"C:\Users\RD\Desktop\PagedAdventuresProject\HelpFiles\Help - Forgot Password.pdf");
 #else
                         System.Diagnostics.Process.Start(Application.StartupPath.ToString() + @"\HelpFiles\Help - Forgot Password.pdf");
 #endif
@@ -74,7 +74,7 @@ namespace FinalProject
                     {
                         //sslMessages.Text = "Help File Opened - Look for it in a Browser Window";
                         #if DEBUG
-                        System.Diagnostics.Process.Start(@"C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\HelpFiles\Help - Customer View Form.pdf");
+                        System.Diagnostics.Process.Start(@"C:\Users\RD\Desktop\PagedAdventuresProject\HelpFiles\Help - Customer View Form.pdf");
 #else
                         System.Diagnostics.Process.Start(Application.StartupPath.ToString() + @"\HelpFiles\Help - Customer View Form.pdf");
 #endif
