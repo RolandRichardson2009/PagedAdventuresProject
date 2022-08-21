@@ -1,0 +1,64 @@
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.csproj.AssemblyReference.cache
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.frmForgotPassword.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.frmNewUser.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.csproj.GenerateResource.cache
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\bin\Release\Paged Adventures.exe.config
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\bin\Release\Paged Adventures.exe.manifest
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\bin\Release\Paged Adventures.application
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\bin\Release\Paged Adventures.exe
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\bin\Release\Paged Adventures.pdb
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\Paged_Adventures.Properties.Resources.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\Paged Adventures.exe.manifest
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\Paged Adventures.application
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\Paged Adventures.exe
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\Paged Adventures.pdb
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\bin\Release\Interop.AcroPDFLib.dll
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\bin\Release\AxInterop.AcroPDFLib.dll
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\Interop.AcroPDFLib.dll
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\AxInterop.AcroPDFLib.dll
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.csproj.ResolveComReference.cache
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.frmCustomerView.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.frmLogon.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.frmCustomers.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.frmDiscounts.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.frmInventory.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.frmNewCustomer.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.frmNewDiscount.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.frmNewItem.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.frmNewManager.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.frmPersonnel.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland\obj\Release\FinalProject.frmReports.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\bin\Release\Paged Adventures.exe.config
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\bin\Release\Paged Adventures.exe.manifest
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\bin\Release\Paged Adventures.application
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\bin\Release\Paged Adventures.exe
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\bin\Release\Paged Adventures.pdb
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\bin\Release\Interop.AcroPDFLib.dll
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\bin\Release\AxInterop.AcroPDFLib.dll
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.csproj.AssemblyReference.cache
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\Interop.AcroPDFLib.dll
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\AxInterop.AcroPDFLib.dll
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.csproj.ResolveComReference.cache
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.frmCustomers.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.frmCustomerView.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.frmDiscounts.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.frmForgotPassword.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.frmInventory.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.frmLogon.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.frmNewCustomer.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.frmNewDiscount.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.frmNewItem.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.frmNewManager.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.frmNewUser.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.frmPersonnel.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.frmReports.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\Paged_Adventures.Properties.Resources.resources
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.csproj.GenerateResource.cache
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\FinalProject.csproj.CoreCompileInputs.cache
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\Paged Adventures.exe.manifest
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\Paged Adventures.application
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\Paged Adventures.exe
+C:\Users\RD\Desktop\22SU-FinalProject-RichardsonRoland - Copy\obj\Release\Paged Adventures.pdb
