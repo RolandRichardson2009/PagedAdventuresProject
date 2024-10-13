@@ -1,0 +1,161 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|c:\\users\\rd\\desktop\\boards\\objective 003\\pagedadventuresproject-main\\pagedadventuresproject-main\\clssql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|solutionrelative:clssql.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmcustomerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|solutionrelative:frmcustomerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmcustomerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|solutionrelative:frmcustomerview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmnewitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|solutionrelative:frmnewitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|solutionrelative:frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|solutionrelative:frminventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmlogon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|solutionrelative:frmlogon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmlogon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|solutionrelative:frmlogon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmnewitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F70EBD24-52AE-435B-B376-4356C2B95D57}|FinalProject.csproj|solutionrelative:frmnewitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmInventory.cs",
+              "DocumentMoniker": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmInventory.cs",
+              "RelativeDocumentMoniker": "frmInventory.cs",
+              "ToolTip": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmInventory.cs",
+              "RelativeToolTip": "frmInventory.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAjwDAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T22:47:53.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmNewItem.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmNewItem.cs",
+              "RelativeDocumentMoniker": "frmNewItem.cs",
+              "ToolTip": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmNewItem.cs [Design]",
+              "RelativeToolTip": "frmNewItem.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T22:29:36.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmInventory.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmInventory.cs",
+              "RelativeDocumentMoniker": "frmInventory.cs",
+              "ToolTip": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmInventory.cs [Design]",
+              "RelativeToolTip": "frmInventory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T22:29:27.436Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmNewItem.cs",
+              "DocumentMoniker": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmNewItem.cs",
+              "RelativeDocumentMoniker": "frmNewItem.cs",
+              "ToolTip": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmNewItem.cs",
+              "RelativeToolTip": "frmNewItem.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAEwD0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T03:35:06.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "clsSQL.cs",
+              "DocumentMoniker": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\clsSQL.cs",
+              "RelativeDocumentMoniker": "clsSQL.cs",
+              "ToolTip": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\clsSQL.cs",
+              "RelativeToolTip": "clsSQL.cs",
+              "ViewState": "AgIAAHsKAAAAAAAAAAAgwI4KAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T02:46:57.933Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmCustomerView.cs",
+              "DocumentMoniker": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmCustomerView.cs",
+              "RelativeDocumentMoniker": "frmCustomerView.cs",
+              "ToolTip": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmCustomerView.cs",
+              "RelativeToolTip": "frmCustomerView.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAQwCEAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T02:46:33.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmCustomerView.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmCustomerView.cs",
+              "RelativeDocumentMoniker": "frmCustomerView.cs",
+              "ToolTip": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmCustomerView.cs [Design]",
+              "RelativeToolTip": "frmCustomerView.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T02:46:27.965Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmLogon.cs",
+              "DocumentMoniker": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmLogon.cs",
+              "RelativeDocumentMoniker": "frmLogon.cs",
+              "ToolTip": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmLogon.cs",
+              "RelativeToolTip": "frmLogon.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAWwBkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T02:45:59.651Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmLogon.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmLogon.cs",
+              "RelativeDocumentMoniker": "frmLogon.cs",
+              "ToolTip": "C:\\Users\\RD\\Desktop\\BOARDS\\Objective 003\\PagedAdventuresProject-main\\PagedAdventuresProject-main\\frmLogon.cs [Design]",
+              "RelativeToolTip": "frmLogon.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T02:45:58.129Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

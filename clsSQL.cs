@@ -4,6 +4,7 @@
 // Course: INEW 2330.7Z1 (Final Project)
 // Program Description: Bookstore application for inventroy management and sales.
 //*******************************************
+using MySqlConnector;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -12,6 +13,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+
 namespace FinalProject
 {
     internal class clsSQL
@@ -20,19 +22,16 @@ namespace FinalProject
         #region variables
         //connection string to Paged Adventures database
         private const string CONNECT_STRING =
-        @"Server=cstnt.tstc.edu;" +
-         "Database=inew2332su22;" +
-         "User Id=RichardsonR22Su2332;" +
-         "password=Password!2009";
+         @"Server=localhost;" +
+         "Port = 3306;" +
+         "User Id=root;" +
+         "password=aasdfasdfasdf";//Put real password here
         ////build a connection to PagedAdventures database
-        private static SqlConnection _cntPagedAdventuresDatabase = new SqlConnection(@"Server=cstnt.tstc.edu;" +
-         "Database=inew2332su22;" +
-         "User Id=;" +
-         "password=");
+        private static MySqlConnection _cntPagedAdventuresDatabase = new MySqlConnection(CONNECT_STRING);
         //add the command object
-        private static SqlCommand _sqlPagedAdventuresCommand;
+        private static MySqlCommand _sqlPagedAdventuresCommand;
         //add the data adapter
-        private static SqlDataAdapter _daPagedAdventures = new SqlDataAdapter();
+        private static MySqlDataAdapter _daPagedAdventures = new MySqlDataAdapter();
         //add the data table
         private static DataTable _dtPagedAdventuresTable = new DataTable();
         private static StringBuilder errorMessages = new StringBuilder();//add the data table
@@ -67,11 +66,11 @@ namespace FinalProject
 
                 //establish command object
                 _sqlPagedAdventuresCommand =
-                    new SqlCommand(sqlStatement,
+                    new MySqlCommand(sqlStatement,
                     _cntPagedAdventuresDatabase);
                 //Reset Data Adapter
                 _daPagedAdventures.Dispose();
-                _daPagedAdventures = new SqlDataAdapter();
+                _daPagedAdventures = new MySqlDataAdapter();
                 //establish data adapter
                 _daPagedAdventures.SelectCommand =
                     _sqlPagedAdventuresCommand;
@@ -149,15 +148,15 @@ namespace FinalProject
                 //statement for the command string
                 string sqlStatement =
                     "SELECT * " +
-                "FROM Person " +
+                "FROM paged_adventures.person " +
                 $"WHERE PositionID = {1002};";
                 //establish command object
                 _sqlPagedAdventuresCommand =
-                    new SqlCommand(sqlStatement,
+                    new MySqlCommand(sqlStatement,
                     _cntPagedAdventuresDatabase);
                 //Reset Data Adapter
                 _daPagedAdventures.Dispose();
-                _daPagedAdventures = new SqlDataAdapter();
+                _daPagedAdventures = new MySqlDataAdapter();
                 //establish data adapter
                 _daPagedAdventures.SelectCommand =
                     _sqlPagedAdventuresCommand;
@@ -220,16 +219,16 @@ namespace FinalProject
                 "Quantity AS 'Quantity On Hand', " +
                 "RestockThreshold AS 'Restock Threshold', " +
                 "Discontinued AS 'Availability' " +
-                "FROM Inventory " +
+                "FROM paged_adventures.Inventory " +
                 "WHERE (Discontinued = 0 OR Discontinued IS NULL);";
 
                 //establish command object
                 _sqlPagedAdventuresCommand =
-                    new SqlCommand(sqlQuery,
+                    new MySqlCommand(sqlQuery,
                     _cntPagedAdventuresDatabase);
                 //Reset Data Adapter
                 _daPagedAdventures.Dispose();
-                _daPagedAdventures = new SqlDataAdapter();
+                _daPagedAdventures = new MySqlDataAdapter();
                 //establish data adapter
                 _daPagedAdventures.SelectCommand =
                     _sqlPagedAdventuresCommand;
@@ -321,17 +320,17 @@ namespace FinalProject
                 "Quantity AS 'Quantity On Hand', " +
                 "RestockThreshold AS 'Restock Threshold', " +
                 "Discontinued AS 'Availability' " +
-                "FROM Inventory " +
+                "FROM paged_adventures.Inventory " +
                 "WHERE (Discontinued = 0 OR Discontinued IS NULL) AND " +
                 "Quantity <= RestockThreshold;";
 
                 //establish command object
                 _sqlPagedAdventuresCommand =
-                    new SqlCommand(sqlQuery,
+                    new MySqlCommand(sqlQuery,
                     _cntPagedAdventuresDatabase);
                 //Reset Data Adapter
                 _daPagedAdventures.Dispose();
-                _daPagedAdventures = new SqlDataAdapter();
+                _daPagedAdventures = new MySqlDataAdapter();
                 //establish data adapter
                 _daPagedAdventures.SelectCommand =
                     _sqlPagedAdventuresCommand;
@@ -420,16 +419,16 @@ namespace FinalProject
                 "Quantity AS 'Quantity On Hand', " +
                 "RestockThreshold AS 'Restock Threshold', " +
                 "Discontinued AS 'Availability' " +
-                "FROM Inventory;";
+                "FROM paged_adventures.Inventory;";
                 
 
                 //establish command object
                 _sqlPagedAdventuresCommand =
-                    new SqlCommand(sqlQuery,
+                    new MySqlCommand(sqlQuery,
                     _cntPagedAdventuresDatabase);
                 //Reset Data Adapter
                 _daPagedAdventures.Dispose();
-                _daPagedAdventures = new SqlDataAdapter();
+                _daPagedAdventures = new MySqlDataAdapter();
                 //establish data adapter
                 _daPagedAdventures.SelectCommand =
                     _sqlPagedAdventuresCommand;
@@ -556,7 +555,7 @@ namespace FinalProject
 
 
 
-                string sqlString = "INSERT INTO Discounts " +
+                string sqlString = "INSERT INTO paged_adventures.Discounts " +
                 "(DiscountCode, " +
                 "Description, " +
                 "DiscountLevel, " +
@@ -576,8 +575,8 @@ namespace FinalProject
                 StartDateArgumentBottom +//Possible NULL
                 $"'{SqlDateTime.Parse(ExpirationDate)}');";
 
-                SqlCommand insertCmd =
-                    new SqlCommand(
+                MySqlCommand insertCmd =
+                    new MySqlCommand(
                         sqlString,
                         _cntPagedAdventuresDatabase);
                 insertCmd.ExecuteNonQuery();
@@ -626,7 +625,7 @@ namespace FinalProject
             try
             {
                 OpenDatabasePagedAdventures();
-                string sqlString = "INSERT INTO Person " +
+                string sqlString = "INSERT INTO paged_adventures.person " +
                "(Title, " +
                "NameFirst, " +
                "NameMiddle, " +
@@ -658,7 +657,7 @@ namespace FinalProject
                $"'{PrimaryPhone}', " +
                $"'{SecondaryPhone}', " +
                $"{PositionID})";
-                SqlCommand insertCmd = new SqlCommand(sqlString, _cntPagedAdventuresDatabase);
+                MySqlCommand insertCmd = new MySqlCommand(sqlString, _cntPagedAdventuresDatabase);
                 insertCmd.ExecuteNonQuery();
                 CloseDisposeDatabasePagedAdventures();
                 MessageBox.Show("Successfully added a new item.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -693,11 +692,11 @@ namespace FinalProject
 
                 OpenDatabasePagedAdventures();
                 string sqlIntVar = "SELECT NameFirst " +
-                    $"FROM Person " +
+                    $"FROM paged_adventures.person " +
                     $"WHERE PersonID = {PersonID}";
 
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlIntVar, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlIntVar, _cntPagedAdventuresDatabase);
                 string FirstNameResult = (string)_sqlPagedAdventuresCommand.ExecuteScalar();
                 CloseDisposeDatabasePagedAdventures();
 
@@ -707,11 +706,11 @@ namespace FinalProject
 
                 OpenDatabasePagedAdventures();
                 string sqlIntVar2 = "SELECT NameLast " +
-                    $"FROM Person " +
+                    $"FROM paged_adventures.person " +
                     $"WHERE PersonID = {PersonID}";
 
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlIntVar2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlIntVar2, _cntPagedAdventuresDatabase);
                 string LastNameResult = (string)_sqlPagedAdventuresCommand.ExecuteScalar();
                 CloseDisposeDatabasePagedAdventures();
 
@@ -746,7 +745,7 @@ namespace FinalProject
             try
             {
                 OpenDatabasePagedAdventures();
-                string sqlStatement2 = "UPDATE Person " +
+                string sqlStatement2 = "UPDATE paged_adventures.person " +
                  $"SET " +
                  $"Title = '{Title}', " +
                  $"NameFirst = '{FirstName}', " +
@@ -765,7 +764,7 @@ namespace FinalProject
                  $"WHERE PersonID = {int.Parse(PersonID)};";
 
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 _sqlPagedAdventuresCommand.ExecuteNonQuery();
 
                 CloseDisposeDatabasePagedAdventures();
@@ -798,13 +797,13 @@ namespace FinalProject
             try
             {
                 OpenDatabasePagedAdventures();
-                string sqlStatement2 = "UPDATE Logon " +
+                string sqlStatement2 = "UPDATE paged_adventures.Logon " +
                  $"SET " +
                  $"AccountDisabled = '{Result}' " +
                  $"WHERE PersonID = {PersonID};";
 
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 _sqlPagedAdventuresCommand.ExecuteNonQuery();
 
                 CloseDisposeDatabasePagedAdventures();
@@ -837,10 +836,10 @@ namespace FinalProject
             try
             {
                 OpenDatabasePagedAdventures();
-                string sqlStatement2 = $"DELETE Person " +
+                string sqlStatement2 = $"DELETE paged_adventures.Person " +
                 $"WHERE PersonID = {PersonID}";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 _sqlPagedAdventuresCommand.ExecuteNonQuery();
 
                 CloseDisposeDatabasePagedAdventures();
@@ -875,15 +874,15 @@ namespace FinalProject
                 //statement for the command string
                 string sqlStatement =
                     "SELECT * " +
-                "FROM Person " +
+                "FROM paged_adventures.Person " +
                 $"WHERE PositionID = {1000};";
                 //establish command object
                 _sqlPagedAdventuresCommand =
-                    new SqlCommand(sqlStatement,
+                    new MySqlCommand(sqlStatement,
                     _cntPagedAdventuresDatabase);
                 //Reset Data Adapter
                 _daPagedAdventures.Dispose();
-                _daPagedAdventures = new SqlDataAdapter();
+                _daPagedAdventures = new MySqlDataAdapter();
                 //establish data adapter
                 _daPagedAdventures.SelectCommand =
                     _sqlPagedAdventuresCommand;
@@ -950,7 +949,7 @@ namespace FinalProject
                 //statement for the command string
                 string sqlStatement =
                     "SELECT * " +
-                "FROM Person " +
+                "FROM paged_adventures.Person " +
                 $"WHERE PositionID = {1000} AND " +
                 $"(PhonePrimary LIKE '%{PrimaryPhone}%' OR PhonePrimary IS NULL) AND " +
                 $"(Email LIKE '%{Email}%' OR Email IS NULL ) AND " +
@@ -958,11 +957,11 @@ namespace FinalProject
                 $"NameFirst LIKE '%{FirstName}%';";
                 //establish command object
                 _sqlPagedAdventuresCommand =
-                    new SqlCommand(sqlStatement,
+                    new MySqlCommand(sqlStatement,
                     _cntPagedAdventuresDatabase);
                 //Reset Data Adapter
                 _daPagedAdventures.Dispose();
-                _daPagedAdventures = new SqlDataAdapter();
+                _daPagedAdventures = new MySqlDataAdapter();
                 //establish data adapter
                 _daPagedAdventures.SelectCommand =
                     _sqlPagedAdventuresCommand;
@@ -1028,8 +1027,8 @@ namespace FinalProject
         {
             try
             {
-                using (SqlConnection sqlConn =
-                    new SqlConnection(CONNECT_STRING))
+                using (MySqlConnection sqlConn =
+                    new MySqlConnection(CONNECT_STRING))
                 {
                     sqlConn.Open();
                     return (sqlConn.State == ConnectionState.Open);
@@ -1052,14 +1051,14 @@ namespace FinalProject
                 OpenDatabasePagedAdventures();
                 string sqlStatement =
                         "SELECT * " +
-                    "FROM Discounts;";
+                    "FROM paged_adventures.Discounts;";
                 //establish command object
                 _sqlPagedAdventuresCommand =
-                    new SqlCommand(sqlStatement,
+                    new MySqlCommand(sqlStatement,
                     _cntPagedAdventuresDatabase);
                 //Reset Data Adapter
                 _daPagedAdventures.Dispose();
-                _daPagedAdventures = new SqlDataAdapter();
+                _daPagedAdventures = new MySqlDataAdapter();
                 //establish data adapter
                 _daPagedAdventures.SelectCommand =
                     _sqlPagedAdventuresCommand;
@@ -1115,10 +1114,10 @@ namespace FinalProject
             try
             {
                 OpenDatabasePagedAdventures();
-                string sqlStatement2 = $"DELETE Discounts " +
+                string sqlStatement2 = $"DELETE paged_adventures.Discounts " +
                 $"WHERE DiscountID = {DiscountID}";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 _sqlPagedAdventuresCommand.ExecuteNonQuery();
 
                 CloseDisposeDatabasePagedAdventures();
@@ -1184,7 +1183,7 @@ namespace FinalProject
                 {
                     StartDateArgument = $"StartDate = '{SqlDateTime.Parse(StartDate)}', ";
                 }
-                string sqlStatement2 = "UPDATE Discounts " +
+                string sqlStatement2 = "UPDATE paged_adventures.Discounts " +
                  $"SET DiscountCode = '{DiscountCode}', " +             //String
                  $"Description= '{Description}', " +                    //String
                  $"DiscountLevel = {int.Parse(DiscountLevel)}, " +      //int
@@ -1197,7 +1196,7 @@ namespace FinalProject
                  $" WHERE DiscountID = {int.Parse(DiscountID)};";        //int
 
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 _sqlPagedAdventuresCommand.ExecuteNonQuery();
 
                 CloseDisposeDatabasePagedAdventures();
@@ -1262,11 +1261,11 @@ namespace FinalProject
 
                     byte[] image = File.ReadAllBytes(openFile.FileName); //Convert image into a byte array
                     image = File.ReadAllBytes(openFile.FileName); //Convert image into a byte array
+                    
 
 
 
-
-                    string sqlString = "INSERT INTO Inventory " +
+                    string sqlString = "INSERT INTO paged_adventures.Inventory " +
            "(ItemName, CategoryID, RetailPrice, " +
            "Cost, RestockThreshold, Quantity, ItemDescription,ItemImage) " +
            $"VALUES ('{Name}', {selectedIndexCategory}, " +
@@ -1276,8 +1275,8 @@ namespace FinalProject
            $"{int.Parse(Quantity)}, " +
            $"'{Description}', " +
            $"(@Image));";
-                    SqlCommand insertCmd = new SqlCommand(sqlString, _cntPagedAdventuresDatabase);
-                    SqlParameter sqlParams = insertCmd.Parameters.AddWithValue("@Image", image); // The parameter will be the image as a byte array
+                    MySqlCommand insertCmd = new MySqlCommand(sqlString, _cntPagedAdventuresDatabase);
+                    MySqlParameter sqlParams = insertCmd.Parameters.AddWithValue("@Image", image); // The parameter will be the image as a byte array
                     sqlParams.DbType = System.Data.DbType.Binary; // The type of data we are sending to the server will be a binary file
 
                     insertCmd.ExecuteNonQuery();
@@ -1316,11 +1315,11 @@ namespace FinalProject
             OpenDatabasePagedAdventures();
             try
             {
-                string sqlStatement2 = $"SELECT Password FROM Logon WHERE " +
+                string sqlStatement2 = $"SELECT Password FROM paged_adventures.Logon WHERE " +
              $"LogonName = '{UsernameVar}' AND " +
              $"Password = '{PasswordVar}'";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 string result = (string)_sqlPagedAdventuresCommand.ExecuteScalar();
                 if (result == PasswordVar)
                 {
@@ -1362,14 +1361,14 @@ namespace FinalProject
                     "SELECT ItemName, " +
                     "Quantity, " +
                     "RestockThreshold " +
-                    "FROM Inventory;";
+                    "FROM paged_adventures.Inventory;";
                 //establish command object
                 _sqlPagedAdventuresCommand =
-                    new SqlCommand(sqlStatement,
+                    new MySqlCommand(sqlStatement,
                     _cntPagedAdventuresDatabase);
                 //Reset Data Adapter
                 _daPagedAdventures.Dispose();
-                _daPagedAdventures = new SqlDataAdapter();
+                _daPagedAdventures = new MySqlDataAdapter();
                 //establish data adapter
                 _daPagedAdventures.SelectCommand =
                     _sqlPagedAdventuresCommand;
@@ -1451,10 +1450,10 @@ namespace FinalProject
             try
             {
                 string sqlStatement2 = $"SELECT PositionTitle " +
-                "FROM Logon WHERE " +
+                "FROM paged_adventures.Logon WHERE " +
                 $"LogonName = '{UserName}';";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 string result = (string)_sqlPagedAdventuresCommand.ExecuteScalar();
                 if (result == "Manager")
                 {
@@ -1504,12 +1503,12 @@ namespace FinalProject
 
                 string sqlStatementDiscountPercentage =//SQL Statement
                     "SELECT DiscountPercentage " +     //SQL Statement
-                    "FROM Discounts " +                //SQL Statement
+                    "FROM paged_adventures.Discounts " +                //SQL Statement
                     "WHERE DiscountCode = " +          //SQL Statement
                    $"'{discountCodeVar}';";            //SQL Statement
 
                 _sqlPagedAdventuresCommand =           //establish command object
-                    new SqlCommand(                    //establish command object
+                    new MySqlCommand(                    //establish command object
                         sqlStatementDiscountPercentage,//establish command object
                         _cntPagedAdventuresDatabase);  //establish command object
 
@@ -1539,10 +1538,10 @@ namespace FinalProject
                 {
                     OpenDatabasePagedAdventures();
                     string sqlStatement1 = "SELECT ExpirationDate " +
-                                $"FROM Discounts " +
+                                $"FROM paged_adventures.Discounts " +
                                 $"WHERE DiscountCode = '{discountCodeVar}';";
                     //establish command object
-                    _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement1, _cntPagedAdventuresDatabase);
+                    _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement1, _cntPagedAdventuresDatabase);
                     DateTime result1 = DateTime.Parse(_sqlPagedAdventuresCommand.ExecuteScalar().ToString());
                     CloseDisposeDatabasePagedAdventures();
                     if (result1 > DateTime.Now)
@@ -1576,10 +1575,10 @@ namespace FinalProject
                 {
                     OpenDatabasePagedAdventures();
                     string sqlStatement1 = "SELECT StartDate " +
-                                $"FROM Discounts " +
+                                $"FROM paged_adventures.Discounts " +
                                 $"WHERE DiscountCode = '{discountCodeVar}';";
                     //establish command object
-                    _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement1, _cntPagedAdventuresDatabase);
+                    _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement1, _cntPagedAdventuresDatabase);
                     DateTime result1 = DateTime.Parse(_sqlPagedAdventuresCommand.ExecuteScalar().ToString());
                     CloseDisposeDatabasePagedAdventures();
 
@@ -1649,7 +1648,7 @@ namespace FinalProject
                 {
                     andPlacer = "AND ";
                 }
-                int totalEntriesInDatabase =
+                Int32 totalEntriesInDatabase =
                     GetTotalNumberOfItems(
                         dgvCustomerView,
                         cbxSelectedIndexVar,
@@ -1675,7 +1674,7 @@ namespace FinalProject
                 "ROW_NUMBER() OVER(ORDER " +
                 "BY ItemName) AS 'ItemRank', " +
                 "InventoryID " +
-                "FROM Inventory " +
+                "FROM paged_adventures.Inventory " +
                 wherePlacer +//Only add if 1 or more
                              //WHERE Statements Exist.
 
@@ -1695,11 +1694,11 @@ namespace FinalProject
                 $"AND {10 + pageModifier};";
                 //establish command object
                 _sqlPagedAdventuresCommand =
-                    new SqlCommand(sqlStatement,
+                    new MySqlCommand(sqlStatement,
                     _cntPagedAdventuresDatabase);
                 //Reset Data Adapter
                 _daPagedAdventures.Dispose();
-                _daPagedAdventures = new SqlDataAdapter();
+                _daPagedAdventures = new MySqlDataAdapter();
                 //establish data adapter
                 _daPagedAdventures.SelectCommand =
                     _sqlPagedAdventuresCommand;
@@ -1731,6 +1730,7 @@ namespace FinalProject
                         "Error on DatabaseCommand",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
+                    MessageBox.Show("Fancy Error Get Inventory");
                     CloseDisposeDatabasePagedAdventures();
                 }
                 else
@@ -1740,6 +1740,7 @@ namespace FinalProject
                         "Error on DatabaseCommand",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
+                    MessageBox.Show("Generic Error Get Inventory");
                     CloseDisposeDatabasePagedAdventures();
                 }
             }
@@ -1768,7 +1769,7 @@ namespace FinalProject
             try
             {
                 OpenDatabasePagedAdventures();
-                string sqlStatement2 = "UPDATE Inventory " +
+                string sqlStatement2 = "UPDATE paged_adventures.Inventory " +
                  $"SET ItemName = '{Name}', " +
                  $"CategoryID= {CategoryID}, " +
                  $"RetailPrice = {decimal.Parse(Price.Substring(1))}, " +
@@ -1780,7 +1781,7 @@ namespace FinalProject
                  $"WHERE InventoryID = {int.Parse(InventoryID)};";
 
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 _sqlPagedAdventuresCommand.ExecuteNonQuery();
 
                 CloseDisposeDatabasePagedAdventures();
@@ -1842,11 +1843,11 @@ namespace FinalProject
             {
                 OpenDatabasePagedAdventures();
                 //TODO: Change(Image) to the name of your image column[e.g(ProductImages)]
-                string insertQuery = "UPDATE Inventory " +
+                string insertQuery = "UPDATE paged_adventures.Inventory " +
                     "SET ItemImage=(@Image) " +// @Image is a parameter we will fill in later
                     $"WHERE InventoryID = {Inventory}";
-                SqlCommand insertCmd = new SqlCommand(insertQuery, _cntPagedAdventuresDatabase);
-                SqlParameter sqlParams = insertCmd.Parameters.AddWithValue("@Image", image); // The parameter will be the image as a byte array
+                MySqlCommand insertCmd = new MySqlCommand(insertQuery, _cntPagedAdventuresDatabase);
+                MySqlParameter sqlParams = insertCmd.Parameters.AddWithValue("@Image", image); // The parameter will be the image as a byte array
                 sqlParams.DbType = System.Data.DbType.Binary; // The type of data we are sending to the server will be a binary file
                 insertCmd.ExecuteNonQuery();
                 _cntPagedAdventuresDatabase.Close();
@@ -1896,8 +1897,8 @@ int pageModifier,
 int cbxSelectedIndexVar,
 string searchStringVar, bool isManager)
         {
-            if (isManager)
-            {
+            //if (isManager)
+            //{
                 try
                 {
                     //dgvCustomerView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -1970,7 +1971,7 @@ string searchStringVar, bool isManager)
                     "BY ItemName) AS 'ItemRank', " +
                     "InventoryID, " +
                     "ItemImage " +
-                    "FROM Inventory " +
+                    "FROM paged_adventures.Inventory " +
                     wherePlacer +//Only add if 1 or more
                                  //WHERE Statements Exist.
 
@@ -1990,11 +1991,11 @@ string searchStringVar, bool isManager)
                     $"AND {10 + pageModifier};";
                     //establish command object
                     _sqlPagedAdventuresCommand =
-                        new SqlCommand(sqlStatement,
+                        new MySqlCommand(sqlStatement,
                         _cntPagedAdventuresDatabase);
                     //Reset Data Adapter
                     _daPagedAdventures.Dispose();
-                    _daPagedAdventures = new SqlDataAdapter();
+                    _daPagedAdventures = new MySqlDataAdapter();
                     //establish data adapter
                     _daPagedAdventures.SelectCommand =
                         _sqlPagedAdventuresCommand;
@@ -2038,7 +2039,7 @@ string searchStringVar, bool isManager)
                         CloseDisposeDatabasePagedAdventures();
                     }
                 }
-            }
+            //}
             return dgvCustomerView;
         }//END GetInventory
         #endregion
@@ -2048,10 +2049,10 @@ string searchStringVar, bool isManager)
             try
             {
                 OpenDatabasePagedAdventures();
-                string sqlStatement2 = $"DELETE Inventory " +
-                $"WHERE InventoryID = {inventoryID}";
+                string sqlStatement2 = $"DELETE FROM paged_adventures.Inventory " +
+                $"WHERE InventoryID = {inventoryID};";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 _sqlPagedAdventuresCommand.ExecuteNonQuery();
 
                 CloseDisposeDatabasePagedAdventures();
@@ -2093,10 +2094,10 @@ string searchStringVar, bool isManager)
             OpenDatabasePagedAdventures();
             try
             {
-                string sqlStatement2 = $"SELECT ItemDescription FROM Inventory WHERE " +
+                string sqlStatement2 = $"SELECT ItemDescription FROM paged_adventures.Inventory WHERE " +
              $"InventoryID = {itemID}";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 string result = (string)_sqlPagedAdventuresCommand.ExecuteScalar();
 
                 CloseDisposeDatabasePagedAdventures();
@@ -2138,7 +2139,7 @@ string searchStringVar, bool isManager)
                 //dgvCustomerView.Refresh();
                 //statement for the command string
                 string sqlStatement = "SELECT CategoryName " +
-                "FROM Categories";
+                "FROM paged_adventures.Categories";
 
 
 
@@ -2162,13 +2163,13 @@ string searchStringVar, bool isManager)
 
 
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement, _cntPagedAdventuresDatabase);
                 //int result = (int)_sqlPagedAdventuresCommand.ExecuteScalar();
 
 
 
 
-                SqlDataReader DR = _sqlPagedAdventuresCommand.ExecuteReader();
+                MySqlDataReader DR = _sqlPagedAdventuresCommand.ExecuteReader();
                 cbxCategories.Items.Add("-");
                 while (DR.Read())
                 {
@@ -2213,10 +2214,10 @@ string searchStringVar, bool isManager)
             {
                 OpenDatabasePagedAdventures();
                 string sqlStatement1 = "SELECT InventoryID " +
-                            $"FROM Inventory " +
+                            $"FROM paged_adventures.Inventory " +
                             $"WHERE ItemName LIKE '{itemNameVar}';";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement1, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement1, _cntPagedAdventuresDatabase);
                 int result1 = (int)_sqlPagedAdventuresCommand.ExecuteScalar();
                 CloseDisposeDatabasePagedAdventures();
 
@@ -2253,12 +2254,12 @@ string searchStringVar, bool isManager)
                         OpenDatabasePagedAdventures();
                         //Update Inventory after user buys items.
                         string sqlQueryVar =
-                        "UPDATE Inventory " +
+                        "UPDATE paged_adventures.Inventory " +
                         $"SET Quantity = {newInventoryQuantity} " +
                         $"WHERE InventoryID = {inventoryIDVar};";//establish command object
-                        _sqlPagedAdventuresCommand = new SqlCommand(sqlQueryVar, _cntPagedAdventuresDatabase);
+                        _sqlPagedAdventuresCommand = new MySqlCommand(sqlQueryVar, _cntPagedAdventuresDatabase);
                         OpenDatabasePagedAdventures();
-                        _sqlPagedAdventuresCommand.BeginExecuteNonQuery();
+                        //_sqlPagedAdventuresCommand.BeginExecuteNonQuery();
                         CloseDisposeDatabasePagedAdventures();
 
 
@@ -2282,10 +2283,10 @@ string searchStringVar, bool isManager)
                 OpenDatabasePagedAdventures();
                 string queryString =
                 "SELECT Quantity " +
-                "FROM Inventory " +
+                "FROM paged_adventures.Inventory " +
                 $"WHERE InventoryID = {InventoryIDVar};";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(queryString, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(queryString, _cntPagedAdventuresDatabase);
                 int quantityVar = (int)_sqlPagedAdventuresCommand.ExecuteScalar();
                 CloseDisposeDatabasePagedAdventures();
                 return quantityVar;
@@ -2307,14 +2308,14 @@ string searchStringVar, bool isManager)
                 OpenDatabasePagedAdventures();
                 string queryString =
                 "SELECT InventoryID " +
-                "FROM Inventory " +
+                "FROM paged_adventures.Inventory " +
                 $"WHERE ItemName = @bookTitleParameter;";//Replace'{strItem}' with @bookTitleParameter
 
 
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(queryString, _cntPagedAdventuresDatabase);
-                SqlParameter[] param = new SqlParameter[1];
-                param[0] = new SqlParameter("@bookTitleParameter", strItem);
+                _sqlPagedAdventuresCommand = new MySqlCommand(queryString, _cntPagedAdventuresDatabase);
+                MySqlParameter[] param = new MySqlParameter[1];
+                param[0] = new MySqlParameter("@bookTitleParameter", strItem);
                 _sqlPagedAdventuresCommand.Parameters.Add(param[0]);
                 int resultItemID = (int)_sqlPagedAdventuresCommand.ExecuteScalar();
                 CloseDisposeDatabasePagedAdventures();
@@ -2341,22 +2342,22 @@ string searchStringVar, bool isManager)
                 if (DiscountID != 0)
                 {
                     OpenDatabasePagedAdventures();
-                    string sqlStringVar2 = "INSERT INTO OrderDetails(OrderID,InventoryID, DiscountID, Quantity) " +
+                    string sqlStringVar2 = "INSERT INTO paged_adventures.OrderDetails(OrderID,InventoryID, DiscountID, Quantity) " +
                         $"VALUES({OrderIDVar}, {InventoryIDVar}, {DiscountID}, {QuantityOrdered});";
 
                     //establish command object
-                    _sqlPagedAdventuresCommand = new SqlCommand(sqlStringVar2, _cntPagedAdventuresDatabase);
+                    _sqlPagedAdventuresCommand = new MySqlCommand(sqlStringVar2, _cntPagedAdventuresDatabase);
                     _sqlPagedAdventuresCommand.ExecuteNonQuery();
                     CloseDisposeDatabasePagedAdventures();
                 }
                 else
                 {
                     OpenDatabasePagedAdventures();
-                    string sqlStringVar2 = "INSERT INTO OrderDetails(OrderID,InventoryID, Quantity) " +
+                    string sqlStringVar2 = "INSERT INTO paged_adventures.OrderDetails(OrderID,InventoryID, Quantity) " +
                         $"VALUES({OrderIDVar}, {InventoryIDVar}, {QuantityOrdered});";
 
                     //establish command object
-                    _sqlPagedAdventuresCommand = new SqlCommand(sqlStringVar2, _cntPagedAdventuresDatabase);
+                    _sqlPagedAdventuresCommand = new MySqlCommand(sqlStringVar2, _cntPagedAdventuresDatabase);
                     _sqlPagedAdventuresCommand.ExecuteNonQuery();
                     CloseDisposeDatabasePagedAdventures();
                 }
@@ -2379,16 +2380,31 @@ string searchStringVar, bool isManager)
 
             try
             {
-                int DiscountID = GetDiscountID(DiscountCodeVar);
+                int DiscountID = 0;
+                try
+                {
+                    DiscountID = GetDiscountID(DiscountCodeVar);
+                }
+                catch(Exception) 
+                {
+                    MessageBox.Show("Network Connection Error, Please try again.",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+
+
+
+
                 if (DiscountID != 0)
                 {
 
                     OpenDatabasePagedAdventures();
-                    string sqlStringVar = "INSERT INTO Orders " +
+                    string sqlStringVar = "INSERT INTO paged_adventures.Orders " +
                     "(CC_Number, ExpDate, CCV, DiscountID, OrderDate, PersonID) " +
                     $"VALUES('{CC_NumberVar}', '{ExpDateVar}', '{CCVVar}', {DiscountID}, GETDATE(), {PersonIDVar});";
                     //establish command object
-                    _sqlPagedAdventuresCommand = new SqlCommand(sqlStringVar, _cntPagedAdventuresDatabase);
+                    _sqlPagedAdventuresCommand = new MySqlCommand(sqlStringVar, _cntPagedAdventuresDatabase);
                     _sqlPagedAdventuresCommand.ExecuteNonQuery();
                     CloseDisposeDatabasePagedAdventures();
 
@@ -2396,10 +2412,10 @@ string searchStringVar, bool isManager)
 
                     OpenDatabasePagedAdventures();
                     string sqlStatement4 = "SELECT MAX(OrderID) " +
-                                         $"FROM Orders WHERE " +
+                                         $"FROM paged_adventures.Orders WHERE " +
                                          $"PersonID = {PersonIDVar};";
                     //establish command object
-                    _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement4, _cntPagedAdventuresDatabase);
+                    _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement4, _cntPagedAdventuresDatabase);
                     int result2 = (int)_sqlPagedAdventuresCommand.ExecuteScalar();
                     CloseDisposeDatabasePagedAdventures();
 
@@ -2407,11 +2423,11 @@ string searchStringVar, bool isManager)
 
                     OpenDatabasePagedAdventures();
                     string sqlStatement3 = "SELECT OrderID " +
-                         $"FROM Orders WHERE " +
+                         $"FROM paged_adventures.Orders WHERE " +
                          $"PersonID = {PersonIDVar} " +
                          $"AND OrderID = {result2};";
                     //establish command object
-                    _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement3, _cntPagedAdventuresDatabase);
+                    _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement3, _cntPagedAdventuresDatabase);
                     int result4 = (int)_sqlPagedAdventuresCommand.ExecuteScalar();
                     CloseDisposeDatabasePagedAdventures();
                     return result4;
@@ -2420,11 +2436,11 @@ string searchStringVar, bool isManager)
                 {
 
                     OpenDatabasePagedAdventures();
-                    string sqlStringVar = "INSERT INTO Orders " +
+                    string sqlStringVar = "INSERT INTO paged_adventures.Orders " +
                     "(CC_Number, ExpDate, CCV, OrderDate, PersonID) " +
                     $"VALUES('{CC_NumberVar}', '{ExpDateVar}', '{CCVVar}', GETDATE(), {PersonIDVar});";
                     //establish command object
-                    _sqlPagedAdventuresCommand = new SqlCommand(sqlStringVar, _cntPagedAdventuresDatabase);
+                    _sqlPagedAdventuresCommand = new MySqlCommand(sqlStringVar, _cntPagedAdventuresDatabase);
                     _sqlPagedAdventuresCommand.ExecuteNonQuery();
                     CloseDisposeDatabasePagedAdventures();
 
@@ -2433,10 +2449,10 @@ string searchStringVar, bool isManager)
 
                     OpenDatabasePagedAdventures();
                     string sqlStatement4 = "SELECT MAX(OrderID) " +
-                         $"FROM Orders WHERE " +
+                         $"FROM paged_adventures.Orders WHERE " +
                          $"PersonID = {PersonIDVar};";
                     //establish command object
-                    _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement4, _cntPagedAdventuresDatabase);
+                    _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement4, _cntPagedAdventuresDatabase);
                     int result2 = (int)_sqlPagedAdventuresCommand.ExecuteScalar();
                     CloseDisposeDatabasePagedAdventures();
 
@@ -2446,11 +2462,11 @@ string searchStringVar, bool isManager)
 
                     OpenDatabasePagedAdventures();
                     string sqlStatement3 = "SELECT OrderID " +
-                         $"FROM Orders WHERE " +
+                         $"FROM paged_adventures.Orders WHERE " +
                          $"PersonID = {PersonIDVar} " +
                          $"AND OrderID = {result2};";
                     //establish command object
-                    _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement3, _cntPagedAdventuresDatabase);
+                    _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement3, _cntPagedAdventuresDatabase);
                     int result4 = (int)_sqlPagedAdventuresCommand.ExecuteScalar();
                     CloseDisposeDatabasePagedAdventures();
                     return result4;
@@ -2477,13 +2493,14 @@ string searchStringVar, bool isManager)
         {
             try
             {
+                
                 OpenDatabasePagedAdventures();
                 string sqlIntVar = "SELECT DiscountID " +
-                    $"FROM Discounts " +
-                    $"WHERE DiscountCode = '{discountCodeVar}'";
+                    $"FROM paged_adventures.Discounts " +
+                    $"WHERE DiscountCode = '{discountCodeVar}';";
 
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlIntVar, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlIntVar, _cntPagedAdventuresDatabase);
                 int discountIDVar = (int)_sqlPagedAdventuresCommand.ExecuteScalar();
                 CloseDisposeDatabasePagedAdventures();
                 return discountIDVar;
@@ -2500,10 +2517,10 @@ string searchStringVar, bool isManager)
             {
                 OpenDatabasePagedAdventures();
                 string sqlStatement1 = "SELECT ItemName " +
-                    $"FROM Inventory WHERE " +
+                    $"FROM paged_adventures.Inventory WHERE " +
                     $"InventoryID = {inventoryID};";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement1, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement1, _cntPagedAdventuresDatabase);
                 String resultItemName = (String)_sqlPagedAdventuresCommand.ExecuteScalar();
                 CloseDisposeDatabasePagedAdventures();
 
@@ -2591,11 +2608,11 @@ string searchStringVar, bool isManager)
 
                 string sqlStatement2 = $"SELECT " +
                     $"RetailPrice FROM " +
-                    $"Inventory " +
+                    $"paged_adventures.Inventory " +
                     $"WHERE InventoryID = {inventoryID};";
 
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 decimal result = (decimal)_sqlPagedAdventuresCommand.ExecuteScalar();
 
                 CloseDisposeDatabasePagedAdventures();
@@ -2665,14 +2682,21 @@ string searchStringVar, bool isManager)
                 dgvCustomerView.Refresh();
                 //statement for the command string
                 string sqlStatement = "SELECT COUNT(*) " +
-                "FROM Inventory" +
+                "FROM paged_adventures.inventory " +
                 wherePlacer +
                 tbxSearchVar +
                 andPlacer +
                 cbxFilterVar;
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement, _cntPagedAdventuresDatabase);
-                int result = (int)_sqlPagedAdventuresCommand.ExecuteScalar();
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement, _cntPagedAdventuresDatabase);
+                MySqlDataReader rd = _sqlPagedAdventuresCommand.ExecuteReader();
+                int result = 1;
+                if (rd.HasRows)
+                {
+                    rd.Read(); // read first row
+                    var count = rd.GetInt32(0);
+                    result = count;
+                }
 
                 CloseDisposeDatabasePagedAdventures();
                 return result;
@@ -2690,11 +2714,13 @@ string searchStringVar, bool isManager)
                             "Procedure: " + ex.Errors[i].Procedure + "\n");
                     }
                     MessageBox.Show(errorMessages.ToString(), "Error on DatabaseCommand", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Fancy GetTotalNumberOfItems Error");
                     CloseDisposeDatabasePagedAdventures();
                 }
                 else
                 {//handles generic ones here
                     MessageBox.Show(ex.Message, "Error on DatabaseCommand", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Fancy GetTotalNumberOfItems Error");
                     CloseDisposeDatabasePagedAdventures();
                 }
             }
@@ -2710,14 +2736,14 @@ string searchStringVar, bool isManager)
             try
             {
                 //statement for the command string
-                string sqlStatement = $"UPDATE Logon " +
+                string sqlStatement = $"UPDATE paged_adventures.Logon " +
                     $"SET Password = '{newPassword}' " +
                     $"WHERE LogonName = '{username}'";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement, _cntPagedAdventuresDatabase);
                 //Reset Data Adapter
                 _daPagedAdventures.Dispose();
-                _daPagedAdventures = new SqlDataAdapter();
+                _daPagedAdventures = new MySqlDataAdapter();
                 //establish data adapter
                 _daPagedAdventures.SelectCommand = _sqlPagedAdventuresCommand;
                 //Reset Data Table
@@ -2760,10 +2786,10 @@ string searchStringVar, bool isManager)
 
                 string sqlStatement2 = $"SELECT " +
                     $"{challengeAnswerVar} FROM " +
-                    $"Logon " +
+                    $"paged_adventures.Logon " +
                     $"WHERE LogonName = '{LogonNameVar}'";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 string result = (string)_sqlPagedAdventuresCommand.ExecuteScalar();
                 if (result == userAnswer)
                 {
@@ -2806,14 +2832,17 @@ string searchStringVar, bool isManager)
             {
 
                 string sqlStatement2 = $"SELECT " +
-                    $"SecurityQuestions.QuestionPrompt FROM " +
-                    $"SecurityQuestions INNER JOIN " +
-                    $"Logon ON Logon.{questionTitle}=SecurityQuestions.QuestionID " +
-                    $"WHERE Logon.LogonName = '{LogonNameVar}' AND " +
-                    $"Logon.{questionTitle}=SecurityQuestions.QuestionID";
+                    $"paged_adventures.SecurityQuestions.QuestionPrompt FROM " +
+                    $"paged_adventures.SecurityQuestions INNER JOIN " +
+                    $"paged_adventures.Logon ON paged_adventures.Logon.{questionTitle}=paged_adventures.SecurityQuestions.QuestionID " +
+                    $"WHERE paged_adventures.Logon.LogonName = '{LogonNameVar}' AND " +
+                    $"paged_adventures.Logon.{questionTitle}=paged_adventures.SecurityQuestions.QuestionID";
+
+
+
 
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 string result = (string)_sqlPagedAdventuresCommand.ExecuteScalar();
 
                 CloseDisposeDatabasePagedAdventures();
@@ -2865,6 +2894,7 @@ string searchStringVar, bool isManager)
                         LastName, Suffix, City,
                         State, Address1,
                         Address2, Address3);
+                MessageBox.Show("Person Added to Person Table.");
                 int result = FindPersonID(
                         ZipCode,
                         FirstName,
@@ -2897,10 +2927,10 @@ string searchStringVar, bool isManager)
             try
             {
                 OpenDatabasePagedAdventures();
-                string sqlStatement2 = $"SELECT PositionTitle FROM Logon WHERE " +
+                string sqlStatement2 = $"SELECT PositionTitle FROM paged_adventures.Logon WHERE " +
              $"LogonName = '{userName}'";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 string result = (string)_sqlPagedAdventuresCommand.ExecuteScalar();
                 CloseDisposeDatabasePagedAdventures();
                 return result;
@@ -2972,12 +3002,17 @@ string searchStringVar, bool isManager)
             //method to open database
             try
             {
+                //MessageBox.Show("Begin Try");
                 if (_cntPagedAdventuresDatabase != null)
-                    _cntPagedAdventuresDatabase = new SqlConnection(CONNECT_STRING);
+                    _cntPagedAdventuresDatabase = new MySqlConnection(CONNECT_STRING);
+
+                //MessageBox.Show("Did I break here?");
                 if (DBConnectionStatus())
                 {
                     //open the connection to MovieStore database
+                    //MessageBox.Show("Just before opening database");
                     _cntPagedAdventuresDatabase.Open();
+                    //MessageBox.Show("Got past opening database");
                 }
             }
             catch (SqlException ex)
@@ -3009,10 +3044,10 @@ string searchStringVar, bool isManager)
             try
             {
                 OpenDatabasePagedAdventures();
-                string sqlStatement2 = $"SELECT LogonName FROM Logon WHERE " +
+                string sqlStatement2 = $"SELECT LogonName FROM paged_adventures.Logon WHERE " +
              $"LogonName = '{Username}'";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 string result = (string)_sqlPagedAdventuresCommand.ExecuteScalar();
                 if (result != Username)
                     return true;
@@ -3096,13 +3131,13 @@ string searchStringVar, bool isManager)
                     SecondaryPhone = "'" + SecondaryPhone + "'";
 
                 //statement for the command string
-                string sqlStatement = $"INSERT INTO Person (Title,NameFirst,NameMiddle,NameLast,Suffix,Address1,Address2,Address3,City,Zipcode,State,Email,PhonePrimary,PhoneSecondary,PositionID) " +
+                string sqlStatement = $"INSERT INTO paged_adventures.Person (Title,NameFirst,NameMiddle,NameLast,Suffix,Address1,Address2,Address3,City,Zipcode,State,Email,PhonePrimary,PhoneSecondary,PositionID) " +
                 $"VALUES({Title}, '{FirstName}', {MiddleName}, '{LastName}', {Suffix}, '{Address1}', {Address2}, {Address3}, '{City}', '{ZipCode}', '{State}', {Email}, {PrimaryPhone}, {SecondaryPhone}, 1000)";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement, _cntPagedAdventuresDatabase);
                 //Reset Data Adapter
                 _daPagedAdventures.Dispose();
-                _daPagedAdventures = new SqlDataAdapter();
+                _daPagedAdventures = new MySqlDataAdapter();
                 //establish data adapter
                 _daPagedAdventures.SelectCommand = _sqlPagedAdventuresCommand;
                 //Reset Data Table
@@ -3140,10 +3175,10 @@ string searchStringVar, bool isManager)
             try
             {
                 OpenDatabasePagedAdventures();
-                string sqlStatement2 = $"SELECT PersonID FROM Logon WHERE " +
+                string sqlStatement2 = $"SELECT PersonID FROM paged_adventures.Logon WHERE " +
                  $"LogonName = '{UserName}';";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 int result = (int)_sqlPagedAdventuresCommand.ExecuteScalar();
 
                 CloseDisposeDatabasePagedAdventures();
@@ -3183,7 +3218,7 @@ string searchStringVar, bool isManager)
         {
             try
             {
-                string sqlStatement2 = $"SELECT PersonID FROM Person WHERE " +
+                string sqlStatement2 = $"SELECT PersonID FROM paged_adventures.Person WHERE " +
              $"NameFirst = '{FirstName}' AND " +
                     $"NameLast = '{LastName}' AND " +
                     $"Address1 = '{Address1}' AND " +
@@ -3192,7 +3227,7 @@ string searchStringVar, bool isManager)
                     $"State = '{State}' AND " +
                     $"PositionID = 1000";
                 //establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement2, _cntPagedAdventuresDatabase);
                 int result = (int)_sqlPagedAdventuresCommand.ExecuteScalar();
 
                 return result;
@@ -3249,13 +3284,13 @@ string searchStringVar, bool isManager)
                     ThirdChallengeQuestion = 107;
                 else if (ThirdChallengeQuestion == 2)
                     ThirdChallengeQuestion = 108;
-                string sqlStatement3 = $"INSERT INTO Logon (PersonID, LogonName, Password,FirstChallengeQuestion,FirstChallengeAnswer,SecondChallengeQuestion,SecondChallengeAnswer,ThirdChallengeQuestion,ThirdChallengeAnswer,PositionTitle) " +
+                string sqlStatement3 = $"INSERT INTO paged_adventures.Logon (PersonID, LogonName, Password,FirstChallengeQuestion,FirstChallengeAnswer,SecondChallengeQuestion,SecondChallengeAnswer,ThirdChallengeQuestion,ThirdChallengeAnswer,PositionTitle) " +
                 $"VALUES({result}, '{Username}', '{Password}',{FirstChallengeQuestion},'{FirstChallengeAnswer}',{SecondChallengeQuestion},'{SecondChallengeAnswer}',{ThirdChallengeQuestion},'{ThirdChallengeAnswer}','Customer')";
                 ////establish command object
-                _sqlPagedAdventuresCommand = new SqlCommand(sqlStatement3, _cntPagedAdventuresDatabase);
+                _sqlPagedAdventuresCommand = new MySqlCommand(sqlStatement3, _cntPagedAdventuresDatabase);
                 //Reset Data Adapter
                 _daPagedAdventures.Dispose();
-                _daPagedAdventures = new SqlDataAdapter();
+                _daPagedAdventures = new MySqlDataAdapter();
                 //establish data adapter
                 _daPagedAdventures.SelectCommand = _sqlPagedAdventuresCommand;
                 //Reset Data Table

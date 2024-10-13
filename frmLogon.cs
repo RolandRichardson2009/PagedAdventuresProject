@@ -27,6 +27,14 @@ namespace FinalProject
             //this.Hide();
             //frmCustomerViewVar.ShowDialog();
 
+            //clsSQL.AddItem(
+            //            "Book 1",
+            //            1,
+            //            "11.11",
+            //            "11.10",
+            //            "8",
+            //            "10",
+            //            "Book 1 is good");
 
             try
             {

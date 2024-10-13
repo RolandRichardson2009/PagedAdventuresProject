@@ -25,21 +25,35 @@ namespace FinalProject
         #region frmCustomerView_Load
         private void frmCustomerView_Load(object sender, EventArgs e)
         {
+
+            //MessageBox.Show("Just Before GetInventory command");
             //Fill DataGridView with items from Inventory Table
+
+            
+
             clsSQL.GetInventory(dgvCustomerView,
                 0,
                 cbxCategories.SelectedIndex,
                 tbxSearchByTitle.Text);
+
+
+
             dgvCustomerView.Columns[0].Width = 150;//Picture Column
             dgvCustomerView.Columns[1].Width = 250;//Title Column
             dgvCustomerView.Columns[2].Width = 75;//Price Column
             dgvCustomerView.Columns[2].DefaultCellStyle.Format
                 = "c";//Format Price Column to currency format
+
+
             ((DataGridViewImageColumn)dgvCustomerView.Columns[0]).ImageLayout =
                 DataGridViewImageCellLayout.Zoom;//Fit Picture to given area without stretching
+
+
             dgvCustomerView.Columns[3].Width = 80;//Quantity Column
             dgvCustomerView.Columns[4].Width = 60;//Row Count Column
             dgvCustomerView.Columns["InventoryID"].Visible = false;//Hide InventoryID from User but keep for use in code.
+
+
 
             //Set up current page number label
             if (((clsSQL.GetTotalNumberOfItems(dgvCustomerView, cbxCategories.SelectedIndex, tbxSearchByTitle.Text)) % 10) == 0)
@@ -63,7 +77,7 @@ namespace FinalProject
                 mnsProductsManager.Enabled = true;
                 mnsProductsManager.Visible = true;
             }
-            else 
+            else
             {
                 mnsProductsManager.Enabled = false;
                 mnsProductsManager.Visible = false;
@@ -73,12 +87,12 @@ namespace FinalProject
             {
                 lblCurrentCustomer.Text = ("Current Customer: " + frmCustomers.PersonIDCurrentlySelected).ToString();
             }
-            else 
+            else
             {
                 lblCurrentCustomer.Text = "";
             }
-            
-        
+
+
         }//END frmCustomerView_Load
         #endregion
 

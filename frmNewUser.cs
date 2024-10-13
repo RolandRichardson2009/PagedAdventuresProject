@@ -382,5 +382,10 @@ namespace FinalProject
                     MessageBoxIcon.Error);
             }
         }
+
+        private void frmNewUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
